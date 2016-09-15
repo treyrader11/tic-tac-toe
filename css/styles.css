@@ -11,44 +11,144 @@
     -webkit-padding-start: 0px;
     -webkit-padding-end: 0px;
 }
- body {
- }
-
-#main-wrapper:hover {
-    cursor: pointer;
-}
-
-#main-wrapper {
+body {
     
 }
 
-.col-sm-1,
-.col-sm-3,
-.col-sm-2,
-.col-sm-6 {
-    border: solid black 3px;
-    padding:30px;
-    background: #808e90;
-    color: white;
+ul {
+    list-style-type: none;
 }
 
-.red {
-    color: white;
-    background: red;
-    border: solid white 2px;
+#intro {
+    color: #ecf9ff;
 }
 
-.green {
-    color: green;
+.list-group li {
+    display: inline;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+ 
+#begin-game {
+    font-family: 'Nunito', sans-serif;
+    display: none;
+    height: 70%;
+    width: 70%;
+    background: #101010;
+    margin: 79px auto;
+     box-shadow: 10px 10px 5px #888888;   
+
+
 }
 
-/*.draggable { 
-    width: 150px; 
-    height: 150px; 
-    padding: 0.5em;
-}
-*/
-
-#header-2 {
+#bg-img {
+    background-image: url("../images/logo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: 80vh;
     display: none;
 }
+
+#board-wrapper {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#board {
+    margin-left: 0px;
+
+}
+
+
+.square {
+    width: 200px;
+    height: 200px;
+    font-size: 81px;
+    cursor: pointer;
+    color: #DDD;
+}
+
+.v{
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+}
+
+.h{
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+#game {
+    display: none;
+}
+
+#results-modal {
+    display: none;
+     height: 90%;
+    width: 90%;
+    margin-top: 125px;
+    font-family: 'Nunito', sans-serif;
+    height: 70%;
+    width: 70%;
+    background: #101010;
+    margin: 79px auto;
+    box-shadow: 10px 10px 5px #888888;
+    color: #ecf9ff;   
+}
+
+#replay {
+    margin-bottom: 17px;
+}
+
+#results {
+    margin-bottom: 16px;   
+}
+
+.o {
+    color: red;
+}
+
+.x {
+    color: blue;
+}
+
+@media only screen and (min-width: 890px) {
+    
+       #board {
+            margin-left: 46px;
+       }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    
+       #intro {
+            width: 589px;
+       }
+    
+}
+
+@media only screen and (max-width: 640px) {
+    
+       .square {
+            height: 117px;
+       }
+    
+}
+
+@media only screen and (max-width: 320px) {
+    
+       .square {
+            height: 70px;
+       }
+    
+}
+
+@media only screen and (max-width: 320px) {
+    .square {
+        width: 100px;
+        height: 70px;
+    }
+}
+
+

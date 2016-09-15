@@ -4,59 +4,79 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tic-Tac-Toe</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles2.css">
 </head>
 <body>
 
-	<div class="container text-center" id="header-1">
-		<h1>Say dawg, don't be a drag...</h1>
 
-	</div><br/><br/>
-	<div class="container text-center" id="header-2">
-		<h1>Yo so what I want you to do is click on these stupid little boxes and start dragging them around the screen. I want you to have freedom and cut loose, ya heard?</h1><br/>
 
-	</div>
 
-	<div class="container text-center" id="main-wrapper">
-
-		<div class="row">
-			<div class="col-sm-3 draggable">.col-sm-3</div>
-			<div class="col-sm-3 draggable">.col-sm-3</div>
-			<div class="col-sm-3 draggable">.col-sm-3</div>
-			<div class="col-sm-3 draggable">.col-sm-3</div>
+<section class="container text-center" id="begin-game">
+		<div class="container text-center" id="intro">
+			<h1>Are you ready to play some Tic Tac Toe?</h1>
+			<ul class="list-group" id="buttons">
+				<li><button class="btn btn-primary" id="yes">OK</button>
+				<li><button class="btn btn-danger" id="no">Nah</button></li>
+			</ul>
 		</div>
-		<div class="row">
-			<div class="col-sm-2 draggable">.col-sm-2</div>
-			<div class="col-sm-2 draggable">.col-sm-2</div>
-			<div class="col-sm-2 draggable">.col-sm-2</div>
-			<div class="col-sm-2 draggable">.col-sm-2</div>
-			<div class="col-sm-2 draggable">.col-sm-2</div>
-			<div class="col-sm-2 draggable">.col-sm-2</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6 draggable">.col-sm-6</div>
-			<div class="col-sm-6 draggable">.col-sm-6</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			<div class="col-sm-1 draggable">.col-sm-1</div>
-			
-		</div>
+</section>
 
-		 
-	</div>
+<section class="container text-center" id="bg-img">
+		
+</section>
+
+
+
+<div class="container-fluid" id="game">
+
+	<header class="container text-center" id="header">
+		<ul class="" id="players">
+				
+		</ul>
+		
+	</header>
+	
+
+	<section class="container text-center" id="board-wrapper">
+		<div id="board">
+		    <table class="text-center">
+		      <tr id="row1" class="row">
+		        <td class="square" id="spot1"></td>
+		        <td class="square v" id="spot2"></td>
+		       	<td class="square" id="spot3"></td>
+		      </tr>
+		      <tr id="row2" class="row">
+		        <td class="square h" id="spot4"></td>
+		        <td class="square v h" id="spot5"></td>
+		        <td class="square h" id="spot6"></td>
+		      </tr>
+		      <tr id="row3" class="row">
+		        <td class="square" id="spot7"></td>
+		        <td class="square v" id="spot8"></td>
+		        <td class="square" id="spot9"></td>
+		      </tr>
+		    </table>
+		 </div>
+	</section>
+</div>
+
+	<section class="container text-center" id="results-modal">
+		<div class="container text-center" id="results">
+			<ul id="results-list">
+				
+			</ul>
+		</div>
+		<button class="btn btn-primary" id="replay">play again</button>
+	</section>
+	<br/>
+	<br/>
+
+
+
 
 
 

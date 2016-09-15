@@ -11,9 +11,15 @@
     -webkit-padding-start: 0px;
     -webkit-padding-end: 0px;
 }
+ body {
+ }
 
 #main-wrapper:hover {
     cursor: pointer;
+}
+
+#main-wrapper {
+    
 }
 
 .col-sm-1,
@@ -22,6 +28,8 @@
 .col-sm-6 {
     border: solid black 3px;
     padding:30px;
+    background: #808e90;
+    color: white;
 }
 
 .red {
@@ -40,3 +48,7 @@
     padding: 0.5em;
 }
 */
+
+#header-2 {
+    display: none;
+}

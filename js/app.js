@@ -4,7 +4,7 @@
 $(document).ready(function() {
 
 	$('#main-wrapper').find('.row').children().click(function() {
-		$(this).toggleClass('red');
+		$(this).toggleClass('red').toggle( "explode" );
 		//$( ".draggable" ).draggable();
 	})
 

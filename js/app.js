@@ -36,7 +36,15 @@ function beginGame() {
 	var spot9 = $('#spot9');
 	
 	var player1 = prompt('Enter the name for player 1');
+	if(player1 == '' || player1 == null) {
+		alert("Please enter a name.");
+		location.reload(true);
+	}
 	var player2 = prompt('Enter the name for player 2');
+	if(player2 == '' || player2 == null) {
+		alert("Please enter a name.");
+		location.reload(true);
+	}
 	var x = "<li><h2>" +player1+ ", you're up!</h2></li>";
 	var o = "<li><h2>" +player2+ ", you're up!</h2></li>";
 	$('#results-list').find('li').remove();

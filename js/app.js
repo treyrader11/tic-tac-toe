@@ -52,7 +52,7 @@ function beginGame() {
 	console.log("player2 is " +player2);
 	$('#players').append(x);
 	$('#players').append(o);
-	turn++;
+	//turn++;
 	$('#players').find('#x').addClass('active-x');
 	console.log("round " +turn);	
 
@@ -65,16 +65,16 @@ function beginGame() {
 		console.log("round " +turn);
 		if(turn % 2 == 0) {
 			$(this).addClass('o').text("o");
-			$('#players').find('#x').removeClass('active-x');
-			$('#players').find('#o').addClass('active-o');
+			$('#players').find('#o').removeClass('active-o');
+			$('#players').find('#x').addClass('active-x');
 
 			//$('#players').find('li').remove();
 			//$('#players').append(o);
 		}
 		 else {
 		 	$(this).addClass('x').text("x");
-		 	$('#players').find('#o').removeClass('active-o');
-		 	$('#players').find('#x').addClass('active-x');
+		 	$('#players').find('#x').removeClass('active-x');
+		 	$('#players').find('#o').addClass('active-o');
 		 	//$('#players').find('li').remove();
 		 	//$('#players').append(x);
 		 }
@@ -117,7 +117,7 @@ function beginGame() {
 			showPlayer2(player2, player1, turn);
 		}
 
-		else if(turn > 9) {
+		else if(turn == 9) {
 			$('#game').fadeOut(1000, function() {
 				$('#results-modal').fadeIn(1000)
 			})
@@ -133,7 +133,7 @@ function showPlayer1(player1, player2, turn) {
 	$('.square').empty();
 	$('#board td').removeClass('o');
 	$('#board td').removeClass('x');
-	var winner = "<li><h1>Congratulations, " +player1+ ". You wupped " +player2+ " in Tic Tac Toe!</h1></li>";
+	var winner = "<li><h1>Congratulations, " +player2+ ". You wupped " +player1+ " in Tic Tac Toe!</h1></li>";
 	$('#results-list').append(winner);
 	$('#game').fadeOut(1000, function() {
 		$('#results-modal').fadeIn(1000)
@@ -145,7 +145,7 @@ function showPlayer2(player2, player1, turn) {
 	$('#board td').empty();
 	$('#board td').removeClass('o');
 	$('#board td').removeClass('x');
-	var winner = "<li><h1>Congratulations, " +player2+ ". You wupped " +player1+ " in Tic Tac Toe!</h1></li>";
+	var winner = "<li><h1>Congratulations, " +player1+ ". You wupped " +player2+ " in Tic Tac Toe!</h1></li>";
 	$('#results-list').append(winner);
 	$('#game').fadeOut(1000, function() {
 		$('#results-modal').fadeIn(1000)

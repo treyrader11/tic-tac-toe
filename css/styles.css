@@ -113,12 +113,12 @@ ul {
 }
 
 .active-o {
-    color: blue;
+    color: red;
     font-size: 30px;
 }
 
 .active-x {
-    color: red;
+    color: blue;
     font-size: 30px;
 }
 

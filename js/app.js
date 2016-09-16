@@ -151,6 +151,7 @@ function showTie(turn) {
 }
 
 $('#replay').on('click', function() {
+	location.reload(true);
 	$('#results-modal').fadeOut(500, function() {
 		$('#game').fadeIn(1000, function() {
 			beginGame();

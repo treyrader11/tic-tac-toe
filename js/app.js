@@ -15,6 +15,9 @@ $(document).ready(function() {
 			$(this).remove();
 		});
 	})
+	$('#no').on("click", function() {
+		alert('WHWYHYWHWYWHWYHWYHWY!!?')
+	})
 })
 
 
@@ -40,7 +43,8 @@ function beginGame() {
 	console.log("player1 is " +player1);
 	console.log("player2 is " +player2);
 	$('#players').append(x);
-	turn++;	
+	turn++;
+	console.log("round " +turn);	
 
 	
 
@@ -77,6 +81,7 @@ function beginGame() {
 			$('#game').fadeOut(1000, function() {
 				$('#results-modal').fadeIn(1000)
 			})
+			turn = 0;
 			showPlayer1(player1, player2, turn);
 
 		}
@@ -93,13 +98,15 @@ function beginGame() {
 			$('#game').fadeOut(1000, function() {
 				$('#results-modal').fadeIn(1000)
 			})
+			turn = 0;
 			showPlayer2(player2, player1, turn);
 		}
 
-		else if(turn == 9) {
+		else if(turn > 9) {
 			$('#game').fadeOut(1000, function() {
 				$('#results-modal').fadeIn(1000)
 			})
+			turn = 0;
 			showTie(turn);
 		}
 	});
@@ -136,7 +143,7 @@ function showTie(turn) {
 	$('#board td').empty();
 	$('#board td').removeClass('o');
 	$('#board td').removeClass('x');
-	var tie = "<li><h1>Whoa, it's a tie! I guess thismeans that you two are true tic tac toe rivals!</h1></li>";
+	var tie = "<li><h1>Whoa, it's a tie! I guess this means that you two are true tic tac toe rivals!</h1></li>";
 	$('#results-list').append(tie);
 	$('#game').fadeOut(1000, function() {
 		$('#results-modal').fadeIn(1000)

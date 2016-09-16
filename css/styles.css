@@ -151,6 +151,9 @@ ul {
        .square {
             height: 70px;
        }
+       #board {
+            margin-top: 26px;
+       }
     
 }
 

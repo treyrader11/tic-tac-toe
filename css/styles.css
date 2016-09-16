@@ -159,6 +159,9 @@ ul {
             height: 26vh;
             width: 43vh;
        }
+       #results-list {
+            font-size: 11px;
+       }
 
     
 }

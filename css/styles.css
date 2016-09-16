@@ -112,6 +112,16 @@ ul {
     color: blue;
 }
 
+.active-o {
+    color: blue;
+    font-size: 30px;
+}
+
+.active-x {
+    color: red;
+    font-size: 30px;
+}
+
 @media only screen and (min-width: 890px) {
     
        #board {

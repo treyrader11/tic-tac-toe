@@ -45,13 +45,15 @@ function beginGame() {
 		alert("Please enter a name.");
 		location.reload(true);
 	}
-	var x = "<li><h2>" +player1+ ", you're up!</h2></li>";
-	var o = "<li><h2>" +player2+ ", you're up!</h2></li>";
-	$('#results-list').find('li').remove();
+	var x = "<li class='pull-left' id='x'><h4>" +player1+ ": X</h4></li>";
+	var o = "<li class='pull-right' id='o'><h4>" +player2+ ": O</h4></li>";
+	$('#players').find('li').remove();
 	console.log("player1 is " +player1);
 	console.log("player2 is " +player2);
 	$('#players').append(x);
+	$('#players').append(o);
 	turn++;
+	$('#players').find('#x').addClass('active-x');
 	console.log("round " +turn);	
 
 	
@@ -59,17 +61,22 @@ function beginGame() {
 
 	$('.square').on('click', function() {
 		turn++;
-		$('#players').find('li').remove()
+		//$('#players').find('li').remove()
 		console.log("round " +turn);
 		if(turn % 2 == 0) {
 			$(this).addClass('o').text("o");
+			$('#players').find('#x').removeClass('active-x');
+			$('#players').find('#o').addClass('active-o');
+
 			//$('#players').find('li').remove();
-			$('#players').append(o);
+			//$('#players').append(o);
 		}
 		 else {
 		 	$(this).addClass('x').text("x");
+		 	$('#players').find('#o').removeClass('active-o');
+		 	$('#players').find('#x').addClass('active-x');
 		 	//$('#players').find('li').remove();
-		 	$('#players').append(x);
+		 	//$('#players').append(x);
 		 }
 	})
 

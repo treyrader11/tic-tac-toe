@@ -1,5 +1,10 @@
 'use strict'
 
+$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+
 $(document).ready(function() {
 	$('#begin-game').fadeIn(1000);
 	$('#bg-img').fadeIn(1000);
@@ -20,9 +25,10 @@ $(document).ready(function() {
 	})
 })
 
-
+//Need to reset prompt()s with each newGame
 function beginGame() {
 	var turn = 0;
+	//$('#results-list').find('li').remove();
 	console.log('new game', turn)
 	//Spot vars
 	var spot1 = $('#spot1');
@@ -128,7 +134,7 @@ function beginGame() {
 };
 
 
-function showPlayer1(player1, player2, turn) {
+function showPlayer1(player1, player2) {
 	//turn = 0;
 	$('.square').empty();
 	$('#board td').removeClass('o');
@@ -140,9 +146,9 @@ function showPlayer1(player1, player2, turn) {
 	})
 }
 
-function showPlayer2(player2, player1, turn) {
+function showPlayer2(player2, player1) {
 	//turn = 0;
-	$('#board td').empty();
+	$('.square').empty();
 	$('#board td').removeClass('o');
 	$('#board td').removeClass('x');
 	var winner = "<li><h1>Congratulations, " +player1+ ". You wupped " +player2+ " in Tic Tac Toe!</h1></li>";
@@ -155,7 +161,7 @@ function showPlayer2(player2, player1, turn) {
 }
 
 function showTie(turn) {
-	$('#board td').empty();
+	$('.square').empty();
 	$('#board td').removeClass('o');
 	$('#board td').removeClass('x');
 	var tie = "<li><h1>Whoa, it's a tie! I guess this means that you two are true tic tac toe rivals!</h1></li>";
@@ -166,9 +172,11 @@ function showTie(turn) {
 }
 
 $('#replay').on('click', function() {
-	location.reload(true);
+	//location.reload(true);
+
 	$('#results-modal').fadeOut(500, function() {
 		$('#game').fadeIn(1000, function() {
+			$('#results-list').find('li').remove();
 			beginGame();
 		});
 	})

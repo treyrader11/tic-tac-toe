@@ -9,70 +9,59 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/styles2.css">
 </head>
 <body>
-<div class="se-pre-con"></div>
 
-
-
-
-<section class="container text-center" id="begin-game">
-		<div class="container text-center" id="intro">
+	<section class="row text-center" id="begin-game">
 			<h1>Are you ready to play some Tic Tac Toe?</h1>
 			<ul class="list-group" id="buttons">
 				<li><button class="btn btn-primary" id="yes">OK</button>
 				<li><button class="btn btn-danger" id="no">Nah</button></li>
 			</ul>
 		</div>
-</section>
+	</section>
 
-<section class="container text-center" id="bg-img">
+	<section class="container text-center" id="bg-img">
 		
-</section>
+	</section>
 
 
 
-<div class="container-fluid" id="game">
+	<div class="container-fluid" id="game">
 
-	<header class="container text-center" id="header">
-		<!--<ul id="players">
-				
-		</ul>-->
+		<header class="container text-center" id="header">
 		
-	</header>
+		</header>
 	
 
-	<section class="container text-center" id="board-wrapper">
-		<ol class="nav" id="players">
-			
-		</ol>
-		<div id="board">
-		    <table class="text-center">
-		      <tr id="row1" class="row">
-		        <td class="square" id="spot1"></td>
-		        <td class="square v" id="spot2"></td>
-		       	<td class="square" id="spot3"></td>
-		      </tr>
-		      <tr id="row2" class="row">
-		        <td class="square h" id="spot4"></td>
-		        <td class="square v h" id="spot5"></td>
-		        <td class="square h" id="spot6"></td>
-		      </tr>
-		      <tr id="row3" class="row">
-		        <td class="square" id="spot7"></td>
-		        <td class="square v" id="spot8"></td>
-		        <td class="square" id="spot9"></td>
-		      </tr>
-		    </table>
-		 </div>
-	</section>
-</div>
+		<section class="container text-center" id="board-wrapper">
+			<ol class="nav" id="players"></ol>
+			<div id="board">
+		    	<table class="text-center">
+			      	<tr id="row1" class="row">
+			        	<td class="square" id="spot1"></td>
+			        	<td class="square v" id="spot2"></td>
+			       		<td class="square" id="spot3"></td>
+			      	</tr>
+			      	<tr id="row2" class="row">
+			        	<td class="square h" id="spot4"></td>
+			        	<td class="square v h" id="spot5"></td>
+			        	<td class="square h" id="spot6"></td>
+			      	</tr>
+			      	<tr id="row3" class="row">
+			        	<td class="square" id="spot7"></td>
+			        	<td class="square v" id="spot8"></td>
+			        	<td class="square" id="spot9"></td>
+			      	</tr>
+		    	</table>
+		 	</div>
+		</section>
+	</div>
 
-	<section class="container text-center" id="results-modal">
-		<div class="container text-center" id="results">
+	<section class="row text-center" id="results-modal">
+		<div class="col-sm-12 text-center" id="results">
 			<ul id="results-list">
-				
+					
 			</ul>
 		</div>
 		<button class="btn btn-primary" id="replay">play again</button>
@@ -90,6 +79,5 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	<script src="js/app.js"></script>
-	<script src="js/load.js"></script>
 </body>
 </html>

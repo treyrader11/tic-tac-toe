@@ -19,9 +19,7 @@ ul {
     list-style-type: none;
 }
 
-#intro {
-    color: #ecf9ff;
-}
+
 
 .list-group li {
     display: inline;
@@ -30,13 +28,14 @@ ul {
 }
  
 #begin-game {
+    color: #ecf9ff;
     font-family: 'Nunito', sans-serif;
     display: none;
     height: 70%;
     width: 70%;
     background: #101010;
     margin: 79px auto;
-     box-shadow: 10px 10px 5px #888888;   
+    box-shadow: 10px 10px 5px #888888;   
 
 
 }
